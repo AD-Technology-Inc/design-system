@@ -763,6 +763,121 @@ onMounted(() => {
                       >--border</span
                     >
                   </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--success)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--success</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--warning)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--warning</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--info)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--info</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--destructive)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--danger</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATE-BASED COMPONENTS SHOWCASE -->
+        <div class="card mb-8">
+          <div class="card-header">
+            <div class="card-title">State-Based Component System</div>
+            <div class="card-description">
+              Showcase of unified status states (Success, Info, Warning, Danger) across Badges, Buttons, and Alerts.
+            </div>
+          </div>
+          <div class="card-content flex flex-col gap-6">
+            <!-- Badges & Buttons Showcase -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <span class="form-label mb-2 block">Status Badges</span>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge badge-success">Active / Success</span>
+                  <span class="badge badge-info">Tip / Info</span>
+                  <span class="badge badge-warning">Pending / Warning</span>
+                  <span class="badge badge-danger">Blocked / Danger</span>
+                </div>
+              </div>
+              <div>
+                <span class="form-label mb-2 block">Action Buttons</span>
+                <div class="flex flex-wrap gap-2">
+                  <button class="button button-success">Success</button>
+                  <button class="button button-info">Info</button>
+                  <button class="button button-warning">Warning</button>
+                  <button class="button button-danger">Danger</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Alerts Showcase -->
+            <div class="flex flex-col gap-3">
+              <span class="form-label">Alert Banners (New Reusable Component)</span>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="alert alert-success">
+                  <span class="text-lg leading-none">✅</span>
+                  <div class="alert-content">
+                    <div class="alert-title">Success Alert</div>
+                    <div class="alert-description">Changes have been saved successfully to the cloud.</div>
+                  </div>
+                </div>
+
+                <div class="alert alert-info">
+                  <span class="text-lg leading-none">ℹ️</span>
+                  <div class="alert-content">
+                    <div class="alert-title">Info Notice</div>
+                    <div class="alert-description">A new system update is available. Check the logs.</div>
+                  </div>
+                </div>
+
+                <div class="alert alert-warning">
+                  <span class="text-lg leading-none">⚠️</span>
+                  <div class="alert-content">
+                    <div class="alert-title">Warning Alert</div>
+                    <div class="alert-description">Your session will expire in 5 minutes due to inactivity.</div>
+                  </div>
+                </div>
+
+                <div class="alert alert-danger">
+                  <span class="text-lg leading-none">🚨</span>
+                  <div class="alert-content">
+                    <div class="alert-title">Danger Alert</div>
+                    <div class="alert-description">Failed to save changes. Please check connection.</div>
+                  </div>
                 </div>
               </div>
             </div>

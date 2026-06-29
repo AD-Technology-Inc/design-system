@@ -22,6 +22,7 @@
 @import "./components/breadcrumb.css";
 @import "./components/empty-state.css";
 @import "./components/badge.css";
+@import "./components/alert.css";
 
 @theme inline {
   --font-sans:
@@ -55,6 +56,18 @@
 
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-danger: var(--destructive);
+  --color-danger-foreground: var(--destructive-foreground);
 
   --color-border: var(--border);
   --color-input: var(--input);
