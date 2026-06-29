@@ -10,7 +10,7 @@ A high-premium, responsive, state-of-the-art Design System built with **Vue 3**,
 - **💾 LocalStorage Persistence**: Instantly remembers user preferences across sessions to avoid theme flashes during page reloads.
 - **📱 Fully Responsive Layout**: Built with a mobile-first philosophy, utilizing a responsive grid dashboard, interactive layout shifts, and a sliding drawer menu for viewports under `768px`.
 - **🛠️ Reusable CSS Component Suite**: Custom class definitions for core SaaS building blocks including buttons, dialogs, empty states, input forms, tables, breadcrumbs, and status badges.
-- **✒️ Premium Typography**: Custom typography system configured around Google Fonts' **Instrument Sans** sans-serif font face.
+- **✒️ Premium Typography**: Custom typography system configured around Google Fonts' **Inter** sans-serif font face.
 
 ---
 
@@ -25,7 +25,7 @@ A high-premium, responsive, state-of-the-art Design System built with **Vue 3**,
 │       ├── app.css             # Main stylesheet loading Tailwind & layouts/components
 │       ├── theme/
 │       │   ├── colors.css      # Core HSL color variables (Light & Dark definitions)
-│       │   └── typography.css  # Typography configurations & Instrument Sans setup
+│       │   └── typography.css  # Typography configurations & Inter setup
 │       ├── layouts/
 │       │   ├── app-shell.css   # Main app shell structures (Sidebar + Header + Main Area)
 │       │   ├── sidebar-layout.css
