@@ -72,6 +72,8 @@ The design system exposes core variables as CSS Custom Properties, making them e
 }
 ```
 
+![Design Tokens](./src/assets/design-tokens.png)
+
 ### Core Semantic Tokens Available:
 * `--background` / `--foreground`: Base canvas & text
 * `--card`: Cards & panel surfaces
