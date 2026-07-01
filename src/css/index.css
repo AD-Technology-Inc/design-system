@@ -1,0 +1,22 @@
+/* Theme tokens & variable defaults */
+@import "./theme/colors.css";
+@import "./theme/typography.css";
+
+/* Layout elements */
+@import "./layouts/app-shell.css";
+@import "./layouts/sidebar-layout.css";
+@import "./layouts/split-layout.css";
+
+/* Reusable components */
+@import "./components/button.css";
+@import "./components/card.css";
+@import "./components/form.css";
+@import "./components/table.css";
+@import "./components/dialog.css";
+@import "./components/navbar.css";
+@import "./components/sidebar.css";
+@import "./components/breadcrumb.css";
+@import "./components/empty-state.css";
+@import "./components/badge.css";
+@import "./components/alert.css";
+

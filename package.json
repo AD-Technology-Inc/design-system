@@ -1,8 +1,17 @@
 {
-  "name": "design-system",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@ad-technology-inc/design-system",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
+  "main": "src/css/index.css",
+  "files": [
+    "src/css"
+  ],
+  "exports": {
+    ".": "./src/css/index.css",
+    "./colors.css": "./src/css/theme/colors.css",
+    "./app.css": "./src/css/app.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
