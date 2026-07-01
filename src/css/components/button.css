@@ -1,144 +1,150 @@
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    border-radius: var(--radius, 0.5rem);
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-    border: 1px solid transparent;
-    cursor: pointer;
-    height: 2.25rem;
-    padding: 0 1rem;
-    user-select: none;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--radius, 0.5rem);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  height: 2.25rem;
+  padding: 0 1rem;
+  user-select: none;
+  text-decoration: none;
 }
 
 .button:focus-visible {
-    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
+  box-shadow:
+    0 0 0 2px var(--background),
+    0 0 0 4px var(--primary);
 }
 
 .button:disabled {
-    pointer-events: none;
-    opacity: 0.5;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .button-primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .button-primary:hover {
-    background-color: var(--primary-hover);
+  background-color: var(--primary-hover);
 }
 
 .button-primary:active {
-    background-color: color-mix(in srgb, var(--primary-hover) 90%, black);
+  background-color: color-mix(in srgb, var(--primary-hover) 90%, black);
 }
 
 .button-secondary {
-    background-color: var(--secondary);
-    color: var(--secondary-foreground);
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 .button-secondary:hover {
-    background-color: var(--secondary-hover);
+  background-color: var(--secondary-hover);
 }
 
 .button-secondary:active {
-    background-color: color-mix(in srgb, var(--secondary-hover) 90%, black);
+  background-color: color-mix(in srgb, var(--secondary-hover) 90%, black);
 }
 
 .button-outline {
-    border-color: var(--border);
-    background-color: var(--background);
-    color: var(--foreground);
+  border-color: var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .button-outline:hover {
-    background-color: var(--accent);
-    color: var(--accent-foreground);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .button-outline:active {
-    background-color: color-mix(in srgb, var(--accent) 95%, black);
+  background-color: color-mix(in srgb, var(--primary) 90%, black);
 }
 
 .button-danger {
-    background-color: var(--danger);
-    color: var(--danger-foreground);
+  background-color: var(--danger);
+  color: var(--danger-foreground);
 }
 
 .button-danger:hover {
-    background-color: var(--danger-hover);
+  background-color: var(--danger-hover);
 }
 
 .button-danger:active {
-    background-color: color-mix(in srgb, var(--danger-hover) 90%, black);
+  background-color: color-mix(in srgb, var(--danger-hover) 90%, black);
 }
 
 .button-success {
-    background-color: var(--success);
-    color: var(--success-foreground);
+  background-color: var(--success);
+  color: var(--success-foreground);
 }
 
 .button-success:hover {
-    background-color: var(--success-hover);
+  background-color: var(--success-hover);
 }
 
 .button-success:active {
-    background-color: color-mix(in srgb, var(--success-hover) 90%, black);
+  background-color: color-mix(in srgb, var(--success-hover) 90%, black);
 }
 
 .button-warning {
-    background-color: var(--warning);
-    color: var(--warning-foreground);
+  background-color: var(--warning);
+  color: var(--warning-foreground);
 }
 
 .button-warning:hover {
-    background-color: var(--warning-hover);
+  background-color: var(--warning-hover);
 }
 
 .button-warning:active {
-    background-color: color-mix(in srgb, var(--warning-hover) 90%, black);
+  background-color: color-mix(in srgb, var(--warning-hover) 90%, black);
 }
 
 .button-info {
-    background-color: var(--info);
-    color: var(--info-foreground);
+  background-color: var(--info);
+  color: var(--info-foreground);
 }
 
 .button-info:hover {
-    background-color: var(--info-hover);
+  background-color: var(--info-hover);
 }
 
 .button-info:active {
-    background-color: color-mix(in srgb, var(--info-hover) 90%, black);
+  background-color: color-mix(in srgb, var(--info-hover) 90%, black);
 }
 
 .button-link {
-    background-color: transparent;
-    color: var(--primary);
-    border: none;
-    padding: 0;
-    height: auto;
+  background-color: transparent;
+  color: var(--primary);
+  border: none;
+  padding: 0;
+  height: auto;
 }
 
 .button-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .button-sm {
-    height: 2rem;
-    padding: 0 0.75rem;
-    font-size: 0.75rem;
-    border-radius: calc(var(--radius) - 2px);
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
 }
 
 .button-lg {
-    height: 2.75rem;
-    padding: 0 1.5rem;
-    font-size: 1rem;
+  height: 2.75rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
 }

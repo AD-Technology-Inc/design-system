@@ -1,47 +1,47 @@
 .table-container {
-    width: 100%;
-    overflow-x: auto;
-    border-radius: var(--radius, 0.5rem);
-    border: 1px solid var(--border);
-    background-color: var(--card);
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius, 0.5rem);
+  border: 1px solid var(--border);
+  background-color: var(--card);
 }
 
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-    text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
 }
 
 .table th {
-    background-color: transparent;
-    color: var(--neutral-foreground);
-    font-weight: 600;
-    padding: 0.75rem 1rem;
-    border-bottom: 2px solid var(--border);
-    user-select: none;
+  background-color: transparent;
+  color: var(--neutral-foreground);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--border);
+  user-select: none;
 }
 
 .table td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid var(--border);
-    color: var(--foreground);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
 }
 
 .table tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .table-striped tbody tr:nth-child(odd) {
-    background-color: var(--neutral);
+  background-color: var(--neutral);
 }
 
 .table-hover tbody tr:hover {
-    background-color: var(--accent-hover);
-    cursor: pointer;
+  background-color: var(--neutral-hover);
+  cursor: pointer;
 }
 
 .table-compact th,
 .table-compact td {
-    padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem;
 }
