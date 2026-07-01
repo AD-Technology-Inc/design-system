@@ -74,10 +74,16 @@ const applyTheme = () => {
 
   isResolvedDark.value = isDark;
 
-  if (isDark) {
+  if (theme.value === "dark") {
     document.documentElement.classList.add("dark");
-  } else {
+    document.documentElement.classList.remove("light");
+  } else if (theme.value === "light") {
     document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+  } else {
+    // 'system' theme: remove both classes to let media query handle it natively
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("light");
   }
 };
 

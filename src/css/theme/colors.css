@@ -32,7 +32,44 @@
     --radius: 0.5rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+        color-scheme: dark;
+        --black: hsl(0 0% 0%);
+        --white: hsl(0 0% 100%);
+        --background: hsl(0 0% 3.9%);
+        --foreground: hsl(0 0% 98%);
+        --card: hsl(0 0% 3.9%);
+        --primary: hsl(180 100% 66.3%);
+        --primary-hover: hsl(180 100% 45.1%);
+        --primary-foreground: hsl(0 0% 0%);
+        --secondary: hsl(0 0% 14.9%);
+        --secondary-hover: hsl(0 0% 20%);
+        --secondary-foreground: hsl(0 0% 98%);
+        --accent: hsl(0 0% 14.9%);
+        --accent-hover: hsl(0 0% 20%);
+        --accent-foreground: hsl(0 0% 98%);
+        --neutral: hsl(0 0% 14.9%);
+        --neutral-hover: hsl(0 0% 20%);
+        --neutral-foreground: hsl(0 0% 63.9%);
+        --border: hsl(0 0% 14.9%);
+        --success: hsl(142.1 70% 70%);
+        --success-hover: hsl(142.1 70% 60%);
+        --success-foreground: hsl(0 0% 9%);
+        --warning: hsl(47.9 70% 70%);
+        --warning-hover: hsl(47.9 70% 60%);
+        --warning-foreground: hsl(0 0% 9%);
+        --info: hsl(217.2 91.2% 59.8%);
+        --info-hover: hsl(217.2 91.2% 50%);
+        --info-foreground: hsl(0 0% 9%);
+        --danger: hsl(0 84% 60%);
+        --danger-hover: hsl(0 84% 50%);
+        --danger-foreground: hsl(0 0% 98%);
+    }
+}
+
 .dark {
+    color-scheme: dark;
     --black: hsl(0 0% 0%);
     --white: hsl(0 0% 100%);
     --background: hsl(0 0% 3.9%);
