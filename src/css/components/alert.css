@@ -5,7 +5,7 @@
     padding: 1rem;
     border-radius: var(--radius, 0.5rem);
     border: 1px solid var(--border);
-    background-color: var(--muted);
+    background-color: var(--neutral);
     color: var(--foreground);
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -41,9 +41,9 @@
 
 /* Danger Alert */
 .alert-danger {
-    background-color: color-mix(in srgb, var(--destructive) 8%, var(--background));
-    border-color: color-mix(in srgb, var(--destructive) 20%, transparent);
-    color: var(--destructive);
+    background-color: color-mix(in srgb, var(--danger) 8%, var(--background));
+    border-color: color-mix(in srgb, var(--danger) 20%, transparent);
+    color: var(--danger);
 }
 
 /* Info Alert */

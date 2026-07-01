@@ -16,7 +16,7 @@
 .form-textarea {
     width: 100%;
     border-radius: var(--radius, 0.5rem);
-    border: 1px solid var(--input);
+    border: 1px solid var(--border);
     background-color: var(--background);
     padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
@@ -30,14 +30,14 @@
 .form-select:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--ring);
-    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--ring);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
 }
 
 .form-input::placeholder,
 .form-select::placeholder,
 .form-textarea::placeholder {
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
     opacity: 0.8;
 }
 
@@ -46,7 +46,7 @@
 .form-textarea:disabled {
     cursor: not-allowed;
     opacity: 0.5;
-    background-color: var(--muted);
+    background-color: var(--neutral);
 }
 
 .form-textarea {
@@ -54,6 +54,72 @@
     resize: vertical;
 }
 
+/* File Input */
+.form-file {
+    width: 100%;
+    font-size: 0.875rem;
+    color: var(--neutral-foreground);
+}
+
+.form-file::file-selector-button {
+    margin-right: 1rem;
+    border: 1px solid var(--border);
+    background-color: var(--neutral);
+    color: var(--foreground);
+    padding: 0.375rem 0.75rem;
+    border-radius: var(--radius, 0.5rem);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.form-file::file-selector-button:hover {
+    background-color: var(--neutral-hover);
+    border-color: color-mix(in srgb, var(--border) 90%, black);
+}
+
+.form-file:focus-visible {
+    outline: none;
+}
+
+.form-file:focus-visible::file-selector-button {
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
+}
+
+/* Range Input */
+.form-range {
+    width: 100%;
+    height: 0.375rem;
+    background-color: var(--neutral);
+    border-radius: var(--radius, 0.5rem);
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    transition: background-color 0.2s;
+}
+
+.form-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    background-color: var(--primary);
+    border: 2px solid var(--background);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.form-range::-webkit-slider-thumb:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.1);
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
+}
+
+/* Checkbox & Radio wrappers */
 .form-checkbox-wrapper,
 .form-radio-wrapper {
     display: flex;
@@ -63,33 +129,64 @@
 
 .form-checkbox,
 .form-radio {
+    appearance: none;
+    position: relative;
     height: 1rem;
     width: 1rem;
     border-radius: 0.25rem;
-    border: 1px solid var(--input);
-    color: var(--primary);
+    border: 1px solid var(--border);
     background-color: var(--background);
     cursor: pointer;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.form-checkbox:checked,
+.form-radio:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.form-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 0.2rem;
+    height: 0.4rem;
+    border-bottom: 2px solid var(--primary-foreground);
+    border-right: 2px solid var(--primary-foreground);
 }
 
 .form-radio {
     border-radius: 9999px;
 }
 
+.form-radio:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+    background-color: var(--primary-foreground);
+}
+
 .form-checkbox:focus-visible,
 .form-radio:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--ring);
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
 }
 
 .form-helper {
     font-size: 0.75rem;
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
 }
 
 .form-error {
     font-size: 0.75rem;
-    color: var(--destructive);
+    color: var(--danger);
     font-weight: 500;
 }

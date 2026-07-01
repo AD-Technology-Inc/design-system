@@ -104,15 +104,17 @@ When styling is required, always use semantic theme utilities instead of Tailwin
 
 Prefer:
 
-- `bg-background`
-- `text-foreground`
-- `bg-card`
-- `bg-primary`
-- `bg-secondary`
-- `bg-muted`
-- `text-muted-foreground`
-- `border-border`
-- `outline-ring`
+- `bg-background` / `text-foreground` (Core backgrounds & text)
+- `bg-card` (Containers)
+- `bg-primary` / `bg-primary-hover` / `text-primary-foreground` (Primary brand states)
+- `bg-secondary` / `text-secondary-foreground` (Secondary accents)
+- `bg-accent` / `text-accent-foreground` (Interactive highlights)
+- `bg-neutral` / `text-neutral-foreground` (Generic neutral states)
+- `bg-success` / `text-success-foreground` (Success states)
+- `bg-warning` / `text-warning-foreground` (Warning states)
+- `bg-danger` / `text-danger-foreground` (Danger states)
+- `text-black` / `text-white` (Absolute black/white colors)
+- `border-border` (Borders)
 
 Avoid:
 

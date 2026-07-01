@@ -12,8 +12,8 @@
 
 /* Default / Neutral Badge */
 .badge {
-    background-color: var(--muted);
-    color: var(--muted-foreground);
+    background-color: var(--neutral);
+    color: var(--neutral-foreground);
     border-color: var(--border);
 }
 
@@ -33,9 +33,9 @@
 
 /* Danger / Blocked Badge */
 .badge-danger {
-    background-color: color-mix(in srgb, var(--destructive) 12%, transparent);
-    color: var(--destructive);
-    border-color: color-mix(in srgb, var(--destructive) 20%, transparent);
+    background-color: color-mix(in srgb, var(--danger) 12%, transparent);
+    color: var(--danger);
+    border-color: color-mix(in srgb, var(--danger) 20%, transparent);
 }
 
 /* Info / Helper Badge */

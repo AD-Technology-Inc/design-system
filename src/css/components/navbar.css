@@ -29,7 +29,7 @@
 .navbar-link {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
     text-decoration: none;
     transition: color 0.2s;
 }

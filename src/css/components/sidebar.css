@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     width: 16rem;
-    border-right: 1px solid var(--sidebar-border, var(--border));
-    background-color: var(--sidebar-background, var(--background));
-    color: var(--sidebar-foreground, var(--foreground));
+    border-right: 1px solid var(--border);
+    background-color: var(--background);
+    color: var(--foreground);
     height: 100vh;
 }
 
@@ -13,7 +13,7 @@
     align-items: center;
     height: 4rem;
     padding: 0 1.5rem;
-    border-bottom: 1px solid var(--sidebar-border, var(--border));
+    border-bottom: 1px solid var(--border);
 }
 
 .sidebar-content {
@@ -39,22 +39,22 @@
     font-size: 0.875rem;
     font-weight: 500;
     border-radius: var(--radius, 0.5rem);
-    color: var(--sidebar-foreground, var(--muted-foreground));
+    color: var(--neutral-foreground);
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .sidebar-item:hover {
-    background-color: var(--sidebar-accent, var(--accent));
-    color: var(--sidebar-accent-foreground, var(--accent-foreground));
+    background-color: var(--accent);
+    color: var(--accent-foreground);
 }
 
 .sidebar-item.active {
-    background-color: var(--sidebar-primary, var(--primary));
-    color: var(--sidebar-primary-foreground, var(--primary-foreground));
+    background-color: var(--primary);
+    color: var(--primary-foreground);
 }
 
 .sidebar-footer {
     padding: 1.5rem;
-    border-top: 1px solid var(--sidebar-border, var(--border));
+    border-top: 1px solid var(--border);
 }

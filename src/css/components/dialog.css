@@ -39,7 +39,7 @@
 
 .dialog-description {
     font-size: 0.875rem;
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
 }
 
 .dialog-footer {

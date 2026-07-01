@@ -12,11 +12,11 @@
 .breadcrumb-item {
     display: flex;
     align-items: center;
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
 }
 
 .breadcrumb-item a {
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -26,7 +26,7 @@
 }
 
 .breadcrumb-separator {
-    color: var(--muted-foreground);
+    color: var(--neutral-foreground);
     user-select: none;
 }
 

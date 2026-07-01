@@ -17,7 +17,7 @@
 }
 
 .button:focus-visible {
-    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--ring);
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
 }
 
 .button:disabled {
@@ -31,11 +31,11 @@
 }
 
 .button-primary:hover {
-    background-color: color-mix(in srgb, var(--primary) 90%, black);
+    background-color: var(--primary-hover);
 }
 
 .button-primary:active {
-    background-color: color-mix(in srgb, var(--primary) 80%, black);
+    background-color: color-mix(in srgb, var(--primary-hover) 90%, black);
 }
 
 .button-secondary {
@@ -44,11 +44,11 @@
 }
 
 .button-secondary:hover {
-    background-color: color-mix(in srgb, var(--secondary) 95%, black);
+    background-color: var(--secondary-hover);
 }
 
 .button-secondary:active {
-    background-color: color-mix(in srgb, var(--secondary) 90%, black);
+    background-color: color-mix(in srgb, var(--secondary-hover) 90%, black);
 }
 
 .button-outline {
@@ -67,16 +67,16 @@
 }
 
 .button-danger {
-    background-color: var(--destructive);
-    color: var(--destructive-foreground);
+    background-color: var(--danger);
+    color: var(--danger-foreground);
 }
 
 .button-danger:hover {
-    background-color: color-mix(in srgb, var(--destructive) 90%, black);
+    background-color: var(--danger-hover);
 }
 
 .button-danger:active {
-    background-color: color-mix(in srgb, var(--destructive) 80%, black);
+    background-color: color-mix(in srgb, var(--danger-hover) 90%, black);
 }
 
 .button-success {
@@ -85,11 +85,11 @@
 }
 
 .button-success:hover {
-    background-color: color-mix(in srgb, var(--success) 90%, black);
+    background-color: var(--success-hover);
 }
 
 .button-success:active {
-    background-color: color-mix(in srgb, var(--success) 80%, black);
+    background-color: color-mix(in srgb, var(--success-hover) 90%, black);
 }
 
 .button-warning {
@@ -98,11 +98,11 @@
 }
 
 .button-warning:hover {
-    background-color: color-mix(in srgb, var(--warning) 90%, black);
+    background-color: var(--warning-hover);
 }
 
 .button-warning:active {
-    background-color: color-mix(in srgb, var(--warning) 80%, black);
+    background-color: color-mix(in srgb, var(--warning-hover) 90%, black);
 }
 
 .button-info {
@@ -111,11 +111,11 @@
 }
 
 .button-info:hover {
-    background-color: color-mix(in srgb, var(--info) 90%, black);
+    background-color: var(--info-hover);
 }
 
 .button-info:active {
-    background-color: color-mix(in srgb, var(--info) 80%, black);
+    background-color: color-mix(in srgb, var(--info-hover) 90%, black);
 }
 
 .button-link {

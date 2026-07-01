@@ -62,6 +62,10 @@ const setTheme = (newTheme) => {
   applyTheme();
 };
 
+const toggleTheme = () => {
+  setTheme(isResolvedDark.value ? "light" : "dark");
+};
+
 const applyTheme = () => {
   const isDark =
     theme.value === "dark" ||
@@ -297,169 +301,6 @@ onMounted(() => {
           <a class="navbar-link active hidden sm:inline-block" href="#">Home</a>
           <a class="navbar-link hidden sm:inline-block" href="#">Docs</a>
           <a class="navbar-link hidden sm:inline-block" href="#">API</a>
-
-          <!-- Theme Toggler Dropdown -->
-          <div class="theme-selector-container relative">
-            <button
-              @click="isThemeMenuOpen = !isThemeMenuOpen"
-              class="button button-outline button-sm flex items-center justify-center p-2"
-              aria-label="Toggle theme"
-            >
-              <!-- Sun Icon -->
-              <svg
-                v-if="theme === 'light'"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-4 w-4 text-amber-500"
-              >
-                <circle cx="12" cy="12" r="4" />
-                <path d="M12 2v2" />
-                <path d="M12 20v2" />
-                <path d="m4.93 4.93 1.41 1.41" />
-                <path d="m17.66 17.66 1.41 1.41" />
-                <path d="M2 12h2" />
-                <path d="M20 12h2" />
-                <path d="m6.34 17.66-1.41 1.41" />
-                <path d="m19.07 4.93-1.41 1.41" />
-              </svg>
-              <!-- Moon Icon -->
-              <svg
-                v-else-if="theme === 'dark'"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-4 w-4 text-violet-400"
-              >
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-              </svg>
-              <!-- Laptop / System Icon -->
-              <svg
-                v-else
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-4 w-4"
-              >
-                <rect width="20" height="14" x="2" y="3" rx="2" />
-                <line x1="8" x2="16" y1="21" y2="21" />
-                <line x1="12" x2="12" y1="17" y2="21" />
-              </svg>
-            </button>
-
-            <div
-              v-if="isThemeMenuOpen"
-              class="absolute right-0 mt-2 w-36 rounded-md border border-border bg-card p-1 shadow-md z-50 animate-in fade-in slide-in-from-top-1 duration-100"
-            >
-              <button
-                @click="
-                  setTheme('light');
-                  isThemeMenuOpen = false;
-                "
-                :class="[
-                  'w-full text-left px-2.5 py-1.5 text-sm rounded-sm hover:bg-accent hover:text-accent-foreground flex items-center gap-2',
-                  theme === 'light'
-                    ? 'bg-accent/50 text-foreground font-medium'
-                    : 'text-muted-foreground',
-                ]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="h-3.5 w-3.5"
-                >
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M12 2v2" />
-                  <path d="M12 20v2" />
-                  <path d="M2 12h2" />
-                  <path d="M20 12h2" />
-                </svg>
-                Light
-              </button>
-              <button
-                @click="
-                  setTheme('dark');
-                  isThemeMenuOpen = false;
-                "
-                :class="[
-                  'w-full text-left px-2.5 py-1.5 text-sm rounded-sm hover:bg-accent hover:text-accent-foreground flex items-center gap-2',
-                  theme === 'dark'
-                    ? 'bg-accent/50 text-foreground font-medium'
-                    : 'text-muted-foreground',
-                ]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="h-3.5 w-3.5"
-                >
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                </svg>
-                Dark
-              </button>
-              <button
-                @click="
-                  setTheme('system');
-                  isThemeMenuOpen = false;
-                "
-                :class="[
-                  'w-full text-left px-2.5 py-1.5 text-sm rounded-sm hover:bg-accent hover:text-accent-foreground flex items-center gap-2',
-                  theme === 'system'
-                    ? 'bg-accent/50 text-foreground font-medium'
-                    : 'text-muted-foreground',
-                ]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="h-3.5 w-3.5"
-                >
-                  <rect width="20" height="14" x="2" y="3" rx="2" />
-                  <line x1="12" x2="12" y1="17" y2="21" />
-                </svg>
-                System
-              </button>
-            </div>
-          </div>
         </nav>
       </header>
 
@@ -578,6 +419,59 @@ onMounted(() => {
                   />
                   Active account
                 </label>
+
+                <label class="form-checkbox-wrapper">
+                  <input
+                    v-model="newUser.inactive"
+                    type="checkbox"
+                    class="form-checkbox"
+                  />
+                  Inactive account
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Subscription Tier</label>
+                <div class="flex gap-4 mt-1">
+                  <label class="form-radio-wrapper">
+                    <input
+                      type="radio"
+                      name="tier"
+                      value="free"
+                      class="form-radio"
+                      checked
+                    />
+                    Free
+                  </label>
+                  <label class="form-radio-wrapper">
+                    <input
+                      type="radio"
+                      name="tier"
+                      value="pro"
+                      class="form-radio"
+                    />
+                    Pro
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Weekly Limit</label>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="40"
+                  class="form-range"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Profile Document</label>
+                <input
+                  type="file"
+                  class="form-file"
+                />
               </div>
 
               <div class="flex justify-end gap-3 mt-2">
@@ -616,7 +510,7 @@ onMounted(() => {
               <div class="flex flex-col gap-2">
                 <span class="form-label">Select Active Mode</span>
                 <div
-                  class="grid grid-cols-3 gap-2 p-1 bg-muted rounded-lg border border-border"
+                  class="grid grid-cols-3 gap-2 p-1 bg-neutral rounded-lg border border-border"
                 >
                   <button
                     type="button"
@@ -625,7 +519,7 @@ onMounted(() => {
                       'button button-sm flex items-center justify-center gap-2 border-transparent',
                       theme === 'light'
                         ? 'bg-card text-foreground shadow-sm font-semibold'
-                        : 'bg-transparent text-muted-foreground hover:text-foreground',
+                        : 'bg-transparent text-neutral-foreground hover:text-foreground',
                     ]"
                   >
                     ☀️ Light
@@ -637,7 +531,7 @@ onMounted(() => {
                       'button button-sm flex items-center justify-center gap-2 border-transparent',
                       theme === 'dark'
                         ? 'bg-card text-foreground shadow-sm font-semibold'
-                        : 'bg-transparent text-muted-foreground hover:text-foreground',
+                        : 'bg-transparent text-neutral-foreground hover:text-foreground',
                     ]"
                   >
                     🌙 Dark
@@ -649,7 +543,7 @@ onMounted(() => {
                       'button button-sm flex items-center justify-center gap-2 border-transparent',
                       theme === 'system'
                         ? 'bg-card text-foreground shadow-sm font-semibold'
-                        : 'bg-transparent text-muted-foreground hover:text-foreground',
+                        : 'bg-transparent text-neutral-foreground hover:text-foreground',
                     ]"
                   >
                     💻 System
@@ -659,16 +553,16 @@ onMounted(() => {
 
               <!-- Active Status Info -->
               <div
-                class="rounded-lg border border-border bg-muted/40 p-4 text-sm flex flex-col gap-1.5"
+                class="rounded-lg border border-border bg-neutral/40 p-4 text-sm flex flex-col gap-1.5"
               >
                 <div class="flex justify-between">
-                  <span class="text-muted-foreground">Configured Theme:</span>
+                  <span class="text-neutral-foreground">Configured Theme:</span>
                   <span class="font-medium capitalize text-foreground">{{
                     theme
                   }}</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-muted-foreground">Resolved App State:</span>
+                  <span class="text-neutral-foreground">Resolved App State:</span>
                   <span
                     class="font-medium flex items-center gap-1.5 text-foreground"
                   >
@@ -682,7 +576,7 @@ onMounted(() => {
                   </span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-muted-foreground"
+                  <span class="text-neutral-foreground"
                     >Persistence (LocalStorage):</span
                   >
                   <span class="font-mono text-xs text-foreground">{{
@@ -757,6 +651,50 @@ onMounted(() => {
                   >
                     <div
                       class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--accent)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--accent</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--neutral)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--neutral</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--black)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--black</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
+                      style="background-color: var(--white)"
+                    ></div>
+                    <span class="text-xs font-mono font-medium text-foreground"
+                      >--white</span
+                    >
+                  </div>
+                  <div
+                    class="flex flex-col gap-1.5 p-2 rounded-md border border-border bg-card"
+                  >
+                    <div
+                      class="h-8 rounded w-full border border-border"
                       style="background-color: var(--border)"
                     ></div>
                     <span class="text-xs font-mono font-medium text-foreground"
@@ -801,7 +739,7 @@ onMounted(() => {
                   >
                     <div
                       class="h-8 rounded w-full border border-border"
-                      style="background-color: var(--destructive)"
+                      style="background-color: var(--danger)"
                     ></div>
                     <span class="text-xs font-mono font-medium text-foreground"
                       >--danger</span
@@ -917,7 +855,7 @@ onMounted(() => {
                     <td>
                       <button
                         @click="confirmDelete(index)"
-                        class="button button-outline button-sm text-destructive hover:bg-destructive/10 border-transparent hover:border-destructive/20"
+                        class="button button-outline button-sm !text-danger hover:!bg-danger hover:!text-danger-foreground border-transparent"
                       >
                         Delete
                       </button>
