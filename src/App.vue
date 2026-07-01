@@ -753,6 +753,39 @@ onMounted(() => {
                   </div>
                 </div>
               </div>
+
+              <!-- Accent Highlight Showcase -->
+              <div class="flex flex-col gap-3 pt-4 border-t border-border">
+                <span class="form-label">Accent Interactive Showcase</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Hover Highlight -->
+                  <a
+                    href="#"
+                    class="px-3 py-2 text-sm rounded-md font-medium text-neutral-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
+                    style="border: 1px solid var(--border)"
+                  >
+                    Hover item (Accent hover fill)
+                  </a>
+                  
+                  <!-- Kicker / Subheading Example -->
+                  <div class="px-3 py-1.5 rounded-md" style="border: 1px solid var(--border)">
+                    <span class="text-[10px] font-bold tracking-wider uppercase block mb-0.5" style="color: var(--accent)">
+                      FEATURE SHOWCASE
+                    </span>
+                    <h4 class="text-sm font-semibold text-foreground">Accent Subheading Kicker</h4>
+                  </div>
+                </div>
+                <div class="px-1 text-xs text-neutral-foreground">
+                  Inline text accent:
+                  <a
+                    href="#"
+                    class="text-accent hover:underline font-semibold"
+                    style="color: var(--accent)"
+                    >Accent Text Link</a
+                  >
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
