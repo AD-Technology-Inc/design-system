@@ -48,10 +48,10 @@ By default, Tailwind CSS v4 handles dark mode using media queries. If your proje
 ```
 
 #### Disabling Dark Mode (Light Mode Only):
-If you want to disable dark mode entirely and force your website to stay in light mode (even if the user's OS prefers dark mode), simply add the `light` class to your root `<body>` element:
+If you want to disable dark mode entirely and force your website to stay in light mode (even if the user's OS prefers dark mode), simply add the `light` class to your root `<html>` element:
 
 ```html
-<body class="light">
+<html class="light">
 ```
 This disables the built-in prefers-color-scheme media query and keeps the light-mode variables active.
 
