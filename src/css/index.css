@@ -3,20 +3,20 @@
 @import "./theme/typography.css";
 
 /* Layout elements */
-@import "./layouts/app-shell.css";
-@import "./layouts/sidebar-layout.css";
-@import "./layouts/split-layout.css";
+@import "./layouts/app-shell.css" layer(components);
+@import "./layouts/sidebar-layout.css" layer(components);
+@import "./layouts/split-layout.css" layer(components);
 
 /* Reusable components */
-@import "./components/button.css";
-@import "./components/card.css";
-@import "./components/form.css";
-@import "./components/table.css";
-@import "./components/dialog.css";
-@import "./components/navbar.css";
-@import "./components/sidebar.css";
-@import "./components/breadcrumb.css";
-@import "./components/empty-state.css";
-@import "./components/badge.css";
-@import "./components/alert.css";
+@import "./components/button.css" layer(components);
+@import "./components/card.css" layer(components);
+@import "./components/form.css" layer(components);
+@import "./components/table.css" layer(components);
+@import "./components/dialog.css" layer(components);
+@import "./components/navbar.css" layer(components);
+@import "./components/sidebar.css" layer(components);
+@import "./components/breadcrumb.css" layer(components);
+@import "./components/empty-state.css" layer(components);
+@import "./components/badge.css" layer(components);
+@import "./components/alert.css" layer(components);
 
