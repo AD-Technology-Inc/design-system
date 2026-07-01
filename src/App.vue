@@ -811,13 +811,26 @@ onMounted(() => {
                 </div>
               </div>
               <div>
-                <span class="form-label mb-2 block">Action Buttons</span>
-                <div class="flex flex-wrap gap-2">
+                <span class="form-label mb-2 block">Status & Semantic Buttons</span>
+                <div class="flex flex-wrap gap-2 items-center">
                   <button class="button button-success">Success</button>
                   <button class="button button-info">Info</button>
                   <button class="button button-warning">Warning</button>
                   <button class="button button-danger">Danger</button>
                 </div>
+              </div>
+            </div>
+
+            <!-- Core Button Variants (New) -->
+            <div>
+              <span class="form-label mb-2 block">Core Button Variants</span>
+              <div class="flex flex-wrap gap-3 items-center">
+                <button class="button button-default">Default</button>
+                <button class="button button-secondary">Secondary</button>
+                <button class="button button-outline">Outline</button>
+                <button class="button button-accent">Accent</button>
+                <button class="button button-ghost">Ghost</button>
+                <button class="button button-link">Link</button>
               </div>
             </div>
 
