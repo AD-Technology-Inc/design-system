@@ -47,7 +47,7 @@
 .button-default {
   background-color: var(--primary);
   color: var(--primary-foreground);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
 }
 
 .button-default:hover {
@@ -61,7 +61,7 @@
 .button-secondary {
   background-color: var(--secondary);
   color: var(--secondary-foreground);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
 }
 
 .button-secondary:hover {
@@ -76,7 +76,7 @@
   border: 1px solid var(--border);
   background-color: var(--background);
   color: var(--foreground);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
 }
 
 .button-outline:hover {
@@ -91,7 +91,7 @@
 .button-danger {
   background-color: var(--danger);
   color: var(--danger-foreground);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
 }
 
 .button-danger:hover {
@@ -118,7 +118,7 @@
 .button-accent {
   background-color: var(--accent);
   color: var(--accent-foreground);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
 }
 
 .button-accent:hover {

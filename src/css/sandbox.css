@@ -1,7 +1,6 @@
-@import "tailwindcss";
+@import url("tailwindcss");
+@import url("./app.css");
 
 @custom-variant dark (&:is(.dark *));
-
-@import "./app.css";
 
 /* Sandbox-specific rules (if any) */
