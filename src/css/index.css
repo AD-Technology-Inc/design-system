@@ -1,22 +1,22 @@
 /* Theme tokens & variable defaults */
-@import url("./theme/colors.css");
-@import url("./theme/typography.css");
+@import "./theme/colors.css";
+@import "./theme/typography.css";
 
 /* Layout elements */
-@import url("./layouts/app-shell.css") layer(components);
-@import url("./layouts/sidebar-layout.css") layer(components);
-@import url("./layouts/split-layout.css") layer(components);
+@import "./layouts/app-shell.css" layer(components);
+@import "./layouts/sidebar-layout.css" layer(components);
+@import "./layouts/split-layout.css" layer(components);
 
 /* Reusable components */
-@import url("./components/button.css") layer(components);
-@import url("./components/card.css") layer(components);
-@import url("./components/form.css") layer(components);
-@import url("./components/table.css") layer(components);
-@import url("./components/dialog.css") layer(components);
-@import url("./components/navbar.css") layer(components);
-@import url("./components/sidebar.css") layer(components);
-@import url("./components/breadcrumb.css") layer(components);
-@import url("./components/empty-state.css") layer(components);
-@import url("./components/badge.css") layer(components);
-@import url("./components/alert.css") layer(components);
+@import "./components/button.css" layer(components);
+@import "./components/card.css" layer(components);
+@import "./components/form.css" layer(components);
+@import "./components/table.css" layer(components);
+@import "./components/dialog.css" layer(components);
+@import "./components/navbar.css" layer(components);
+@import "./components/sidebar.css" layer(components);
+@import "./components/breadcrumb.css" layer(components);
+@import "./components/empty-state.css" layer(components);
+@import "./components/badge.css" layer(components);
+@import "./components/alert.css" layer(components);
 
