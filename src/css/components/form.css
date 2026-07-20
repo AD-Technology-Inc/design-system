@@ -23,7 +23,12 @@
     line-height: 1.25rem;
     color: var(--foreground);
     transition: border-color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.form-textarea {
+    min-height: 5rem;
+    resize: vertical;
 }
 
 .form-input:focus,
@@ -47,11 +52,6 @@
     cursor: not-allowed;
     opacity: 0.5;
     background-color: var(--neutral);
-}
-
-.form-textarea {
-    min-height: 5rem;
-    resize: vertical;
 }
 
 /* File Input */
@@ -106,7 +106,7 @@
     border-radius: 9999px;
     background-color: var(--primary);
     border: 2px solid var(--background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
     transition: background-color 0.2s, transform 0.1s;
 }
 
@@ -140,6 +140,10 @@
     transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
 
+.form-radio {
+    border-radius: 9999px;
+}
+
 .form-checkbox:checked,
 .form-radio:checked {
     background-color: var(--primary);
@@ -156,10 +160,6 @@
     height: 0.4rem;
     border-bottom: 2px solid var(--primary-foreground);
     border-right: 2px solid var(--primary-foreground);
-}
-
-.form-radio {
-    border-radius: 9999px;
 }
 
 .form-radio:checked::after {
