@@ -1,3 +1,4 @@
+/* Default / Neutral Badge */
 .badge {
     display: inline-flex;
     align-items: center;
@@ -6,15 +7,10 @@
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--border);
     user-select: none;
-}
-
-/* Default / Neutral Badge */
-.badge {
     background-color: var(--neutral);
     color: var(--neutral-foreground);
-    border-color: var(--border);
 }
 
 /* Success / Active Badge */

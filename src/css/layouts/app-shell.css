@@ -10,7 +10,7 @@
     flex-shrink: 0;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
     .app-shell-sidebar {
         display: flex;
     }

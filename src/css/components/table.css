@@ -28,6 +28,11 @@
   color: var(--foreground);
 }
 
+.table-compact th,
+.table-compact td {
+  padding: 0.5rem 0.75rem;
+}
+
 .table tr:last-child td {
   border-bottom: none;
 }
@@ -39,9 +44,4 @@
 .table-hover tbody tr:hover {
   background-color: var(--neutral-hover);
   cursor: pointer;
-}
-
-.table-compact th,
-.table-compact td {
-  padding: 0.5rem 0.75rem;
 }
